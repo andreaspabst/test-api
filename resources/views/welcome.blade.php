@@ -8,13 +8,15 @@
                 <div class="card-header">JSON RESTful API Placeholer</div>
 
                 <div class="card-body">
-                    Fake REST API zum Lernen von Laravel, Vue JS, Angluar JS usw.
-                    Zum testen von eigenen Anwendungen, UI und zum Prototyping.
+                    <p>
+                        Fake REST API zum Lernen von Laravel, Vue JS, Angluar JS usw.
+                        Zum testen von eigenen Anwendungen, UI und zum Prototyping.
+                    </p>
 
                     <code>
-                        fetch('https://jsonplaceholder.typicode.com/todos/1')
-                        .then(response => response.json())
-                        .then(json => console.log(json))
+                        fetch('https://fakeapi.andreaspabst.com/todos/12')<br>
+                        .then(response => response.json())<br>
+                        .then(json => console.log(json))<br>
                     </code>
 
                 </div>

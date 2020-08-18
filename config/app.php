@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Fake RESTful Online API - Laravel, Vue JS, Angular JS,...'),
 
     /*
     |--------------------------------------------------------------------------
