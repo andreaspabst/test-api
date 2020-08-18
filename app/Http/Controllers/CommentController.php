@@ -20,11 +20,11 @@ class CommentController extends Controller
     public function index(Request $request, Post $post, User $user)
     {
         if ($post && $post->exists) {
-            return new CommentCollection($post->comments);
+            return response()->json( new CommentCollection($post->comments) , 200, [], JSON_PRETTY_PRINT);
         } else if ($user && $user->exists) {
-            return new CommentCollection($user->comments);
+            return response()->json( new CommentCollection($user->comments) , 200, [], JSON_PRETTY_PRINT);
         } else {
-            return new CommentCollection(Comment::all());
+            return response()->json( new CommentCollection(Comment::all()) , 200, [], JSON_PRETTY_PRINT);
         }
     }
 

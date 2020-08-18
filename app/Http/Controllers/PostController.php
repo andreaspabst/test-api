@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return new PostCollection(Post::all());
+        return response()->json( new PostCollection(Post::all()) , 200, [], JSON_PRETTY_PRINT);
     }
 
     /**

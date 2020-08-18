@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('users/{user}/todos', 'TodoController');
-Route::resource('users/{user}/comments', 'CommentController');
-Route::resource('users', 'UserController');
+Route::apiResource('users/{user}/todos', 'TodoController');
+Route::apiResource('users/{user}/comments', 'CommentController');
+Route::apiResource('users', 'UserController');
 
-Route::resource('posts/{post}/comments', 'CommentController');
-Route::resource('posts', 'PostController');
+Route::apiResource('posts/{post}/comments', 'CommentController');
+Route::apiResource('posts', 'PostController');
 
-Route::resource('todos', 'TodoController');
+Route::apiResource('todos', 'TodoController');
 
-Route::resource('comments', 'CommentController');
+Route::apiResource('comments', 'CommentController');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

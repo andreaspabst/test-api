@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('index');
     }
 
     /**
@@ -21,8 +23,28 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
         return view('home');
+    }
+
+    /**
+     * Description of index
+     *
+     * @return void
+     */
+    public function index() {
+        $routes = Route::getRoutes();
+        $apiRoutes = array();
+
+        foreach ($routes as $route) {
+            if (substr($route->getName(),0,"4") === "api.") {
+                $apiRoutes[$route->uri.":".$route->methods[0]] = $route;
+            }
+        }
+
+        krsort($apiRoutes);
+
+        return view('welcome', ['routes' => $apiRoutes]);
     }
 }

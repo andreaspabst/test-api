@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return new UserCollection(User::all());
+        return response()->json( new UserCollection(User::all()), 200, [], JSON_PRETTY_PRINT);
     }
 
     /**
