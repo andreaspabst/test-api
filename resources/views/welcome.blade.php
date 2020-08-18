@@ -10,20 +10,22 @@
                 <div class="card-body">
                     <div class="container mb-3">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h1>Online RESTful JSON Fake API</h1>
                                 <p>
                                     Fake REST API zum Lernen von Laravel, Vue JS, Angluar JS usw.
                                     Zum testen von eigenen Anwendungen, UI und zum Prototyping.
                                 </p>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <p>Beispielcode:</p>
                                 <code>
-                                    fetch('{{env('APP_URL')}}/api/todos/12')<br>
-                                    .then(response => response.json())<br>
-                                    .then(json => console.log(json))<br>
+                                    get('{{env('APP_URL')}}/api/todos')<br>
+                                    &nbsp;&nbsp;&nbsp;.then(response => response.json())<br>
+                                    &nbsp;&nbsp;&nbsp;.then(json => console.log(json))<br>
                                 </code>
+                                <hr>
+                                <examples-get></examples-get>
                             </div>
                         </div>
                     </div>
@@ -32,7 +34,7 @@
 
                     <div class="container mb-3">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h2>Wichtige Resourcen</h2>
                                 <ul class="list-group">
                                     <li class="list-group-item list-group-item-action d-flex justify-content-between">
@@ -53,7 +55,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h2>Erklärung der Klassen</h2>
                                 <p>
                                     Unsere Beispiel API hat einige Resourcen (also Beispielmodels), welche zum erstellen eines Prototypen oder dem Mocken einer Anwendung,<br>
@@ -75,14 +77,14 @@
 
                     <div class="container mb-3">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h3>User::class</h3>
                                 <p>Ein User enthält neben einem Namen, eine E-Mail</p>
                                 <code><pre>@json(\App\User::first(),JSON_PRETTY_PRINT)</pre></code>
                                 <h3>Post::class</h3>
                                 <code><pre>@json(\App\Post::first(),JSON_PRETTY_PRINT)</pre></code>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h3>Todo::class</h3>
                                 <code><pre>@json(\App\Todo::first(),JSON_PRETTY_PRINT)</pre></code>
                                 <h3>Comment::class</h3>
@@ -95,7 +97,7 @@
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h2>Alle Routes</h2>
                                 <div class="list-group">
                                     @foreach($routes as $route)
@@ -111,11 +113,14 @@
                                         @else
                                         @endif
                                         <span>{{substr($route->uri,4)}}</span>
+                                        @if(strpos($route->getName(),".index") !== false)
+                                        <span class="float-right">[<a href="{{route($route->getName())}}" target="_blank" rel="nofollow">Beispiel</a>]</span>
+                                        @endif
                                     </div>
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xs-12 col-md-6">
                                 <h2>HTTP-Methoden erklärt</h2>
                                 <p>
                                     Nebenstehend befinden sich alle Routes der Beispiel API mit jeweiligen Parametern wie etwa <code>{beispiel}</code>.

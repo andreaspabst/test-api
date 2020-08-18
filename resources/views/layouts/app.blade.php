@@ -26,7 +26,6 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/img/online-lernen-andreaspabst.png" srcset="/img/AndreasPabstAcademy-Logo.svg" alt="Fake API Service" style="min-height: 30px; min-width: 250px; max-width: 240px;">
-                    Fake REST JSON API
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +34,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('index') }}">Fake REST JSON API</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

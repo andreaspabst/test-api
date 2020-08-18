@@ -16,10 +16,20 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+/**------------- Load project components ------------**/
+const req = require.context('./components/', true, /\.vue$/i);
+req.keys().map(key => {
+    const name = key.match(/\/([\w/_-]+)/)[1].replace(/[\/_]/g, '-');
+    console.debug('load component ' + name);
+    const component = req(key);
+    return Vue.component(name, component.default);
+});
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+/**
+ * Here we will import
+ */
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios, axios)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
