@@ -59,7 +59,7 @@
                                 <h2>Erklärung der Klassen</h2>
                                 <p>
                                     Unsere Beispiel API hat einige Resourcen (also Beispielmodels), welche zum erstellen eines Prototypen oder dem Mocken einer Anwendung,<br>
-                                    <a href="https://academy.andreaspabst.com/courses/vue-js-online-kurs?ref=fapi" title="Vue JS Onlinekurs" target="_blank">Erlenen von Vue JS</a>
+                                    <a href="https://academy.andreaspabst.com/courses/vue-js-online-kurs?ref=fapi" title="Vue JS Onlinekurs" target="_blank">Erlernen von Vue JS</a>
                                     oder dem <a href="https://academy.andreaspabst.com/courses/laravel-powerkurs?ref=fapi" title="Laravel Onlinekurs" target="_blank">Lernen von Laravel</a> benötigt werden.
                                 </p>
                                 <p>
