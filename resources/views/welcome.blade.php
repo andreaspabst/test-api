@@ -101,13 +101,13 @@
                                     @foreach($routes as $route)
                                     <div class="list-group-item list-group-item-action">
                                         @if($route->methods[0] == "GET")
-                                        <span style="width:80px" class="py-2 badge badge-primary mr-1">{{implode($route->methods,", ")}}</span>
+                                        <span style="width:80px" class="py-2 badge badge-primary mr-1">{{implode(", ",$route->methods)}}</span>
                                         @elseif($route->methods[0] == "POST")
-                                        <span style="width:80px" class="py-2 badge badge-secondary mr-1">{{implode($route->methods,", ")}}</span>
+                                        <span style="width:80px" class="py-2 badge badge-secondary mr-1">{{implode(", ",$route->methods)}}</span>
                                         @elseif($route->methods[0] == "PUT" || $route->methods[0] == "PATCH")
-                                        <span style="width:80px" class="py-2 badge badge-danger mr-1">{{implode($route->methods,", ")}}</span>
+                                        <span style="width:80px" class="py-2 badge badge-danger mr-1">{{implode(", ",$route->methods)}}</span>
                                         @elseif($route->methods[0] == "DELETE")
-                                        <span style="width:80px" class="py-2 badge badge-warning mr-1">{{implode($route->methods,", ")}}</span>
+                                        <span style="width:80px" class="py-2 badge badge-warning mr-1">{{implode(", ",$route->methods)}}</span>
                                         @else
                                         @endif
                                         <span>{{substr($route->uri,4)}}</span>
