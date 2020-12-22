@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Todo as ResourcesTodo;
 use App\Todo;
 use App\User;
 use Illuminate\Http\Request;
@@ -43,7 +44,7 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        //
+        return new ResourcesTodo($todo);
     }
 
     /**
