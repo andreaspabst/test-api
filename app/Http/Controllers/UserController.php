@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\User as ResourcesUser;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use App\Http\Resources\UserCollection;
 
 class UserController extends Controller
@@ -27,7 +27,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->storeRequest($request, User::class);
     }
 
     /**
@@ -38,7 +38,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return $user;
+        return new ResourcesUser( $user );
     }
 
     /**
@@ -48,9 +48,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        return $this->updateRequest($request, $user);
     }
 
     /**

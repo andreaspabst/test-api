@@ -6,7 +6,6 @@ use App\Post;
 use App\User;
 use App\Comment;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use App\Http\Resources\CommentCollection;
 use App\Http\Resources\Comment as ResourcesComment;
 

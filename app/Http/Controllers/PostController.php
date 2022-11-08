@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Post as ResourcesPost;
 use App\Post;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use App\Http\Resources\PostCollection;
 
 class PostController extends Controller
@@ -28,7 +27,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        return new ResourcesPost( new Post($request->all) );
+        return $this->storeRequest($request, Post::class);
     }
 
     /**
@@ -51,7 +50,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        return new ResourcesPost( new Post($request->all) );
+        return $this->updateRequest($request, $post);
     }
 
     /**

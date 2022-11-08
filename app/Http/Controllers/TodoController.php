@@ -6,7 +6,6 @@ use App\Http\Resources\Todo as ResourcesTodo;
 use App\Todo;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use App\Http\Resources\TodoCollection;
 
 class TodoController extends Controller
@@ -33,7 +32,7 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->storeRequest($request, Todo::class);
     }
 
     /**
@@ -56,7 +55,7 @@ class TodoController extends Controller
      */
     public function update(Request $request, Todo $todo)
     {
-        //
+        return $this->updateRequest($request, $todo);
     }
 
     /**
@@ -67,6 +66,6 @@ class TodoController extends Controller
      */
     public function destroy(Todo $todo)
     {
-        //
+        return $this->destroyRequest($todo);
     }
 }
