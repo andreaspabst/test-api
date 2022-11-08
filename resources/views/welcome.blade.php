@@ -64,7 +64,7 @@
                                 </p>
                                 <p>
                                     Die Daten werden täglich um <code>00:00 Uhr (Europe/Berlin)</code> zurückgesetzt. Die API hat Increnment ID's anstatt von UUIDs, damit der Prototype<br>
-                                    auch am nächsten Tag noch funktioniert und wir uns nur IDs von 1, 2, 3,... merken müssen - denn auch wir sind <a href="https://www.fauligenz.de/?ref=fapi" target="_blank" title="Fauligenz">fauligente Menschen</a> 😉.
+                                    auch am nächsten Tag noch funktioniert und wir uns nur IDs von 1, 2, 3,... merken müssen.
                                 </p>
                                 <p>
                                     Neben der Resource Klasse befindet sich ein Badge mit einer Anzahl. Dies repräsentiert die aktuelle Anzahl an Dummy-Content der Fake API für Entwickler.
