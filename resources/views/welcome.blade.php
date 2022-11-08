@@ -13,7 +13,7 @@
                             <div class="col-xs-12 col-md-6">
                                 <h1>Online RESTful JSON Fake API</h1>
                                 <p>
-                                    Fake REST API zum Lernen von Laravel, Vue JS, Angluar JS usw.
+                                    Fake REST API zum Lernen von Laravel, Vue JS, React, Angluar JS usw.
                                     Zum testen von eigenen Anwendungen, UI und zum Prototyping.
                                 </p>
                             </div>
